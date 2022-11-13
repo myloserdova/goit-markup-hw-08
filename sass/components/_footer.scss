@@ -1,7 +1,12 @@
 .footer {
     background-color: var(--background-section-main);
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 15px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: $mobile;
+
+    
 
     &__logo {
         text-decoration: none;
@@ -15,7 +20,14 @@
     }
     &__container {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        @media screen and (min-width: $desktop){
         align-items: baseline;
+        flex-direction: row;
+        }
     }
 }
 
@@ -41,10 +53,14 @@
 
 .follow {
     display: block;
-    margin-left: 70px;
-    width: 206px;
-    height: 80px;
-    margin-right: 93px;
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 70px;
+        width: 206px;
+        height: 80px;
+        margin-right: 93px;
+    }
+
 
     &__text {
         color: var(--white);
@@ -76,9 +92,16 @@
 }
 
 .subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
-    width: 570px;
-    height: 86px;
+    max-width: $mobile;
+
+    @media screen and (min-width:$tablet) {
+        width: 570px;
+        height: 86px;
+    }
 
     &__title {
         display: block;
@@ -92,7 +115,8 @@
     }
 
     &__input {
-        width: 358px;
+        width: 100%;
+        max-width: 450px;
         height: 50px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -100,19 +124,28 @@
         background-color: var(--background-section-main);
         outline: none;
         padding: 15px 16px;
-    }
+
+        @media screen and (min-width: $tablet){
+            width: 358px;
+        }
+            
+        }
+    
 
     &__button {
         @extend %button;
         display: flex;
-        position: absolute;
-        bottom: 0;
-        right: 0;
         gap: 10px;
         width: 200px;
         height: 50px;
         justify-content: center;
         cursor: pointer;
+
+        @media screen and (min-width:$tablet) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
 
         &:focus,
         &:hover {
@@ -124,4 +157,3 @@
         fill: var(--white);
     }
 }
-

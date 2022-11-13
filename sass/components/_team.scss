@@ -9,9 +9,16 @@
 
     &__list {
         display: flex;
+        flex-direction: column;
         gap: 30px;
         align-items: center;
         list-style: none;
+        justify-content: center;
+        
+        @media screen and (min-width: $tablet){
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
 }
 

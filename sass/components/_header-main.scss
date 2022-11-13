@@ -4,6 +4,10 @@
     &__container {
         display: flex;
         align-items: center;
+
+        @media screen and (min-width: $tablet) {
+            justify-content: center;
+        }
     }
 
     &__link {
@@ -12,58 +16,79 @@
 }
 
 .navigation {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-right: 300px;
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 90px;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 300px;
+    }
 
     &__list {
-        display: flex;
+        display: none;
         gap: 50px;
         list-style: none;
         font-weight: 500;
         line-height: 1.14;
-    }
 
-    &__item {
-        text-decoration: none;
-        color: var(--secondary-text-color);
-        padding: 32px 0;
-        display: block;
-        transition: color 250ms var(--timing-function);
-
-        &:hover,
-        &:focus {
-            color: var(--accent-color);
+        @media screen and (min-width: $tablet) {
+            display: flex;
         }
-
-        &--current {
-            color: var(--accent-color);
-
-            &::after {
-                display: block;
-                position: relative;
-                bottom: -32px;
-                height: 4px;
-                width: 100%;
-                background-color: var(--accent-color);
-                border-radius: 2px;
-                content: "";   
-            }
-        } 
     }
 }
 
+.navigation__item {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    padding: 32px 0;
+    display: block;
+    transition: color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+
+    &--current {
+        color: var(--accent-color);
+
+        &::after {
+            display: block;
+            position: relative;
+            bottom: -32px;
+            height: 4px;
+            width: 100%;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+            content: "";   
+        }
+    } 
+}
 
 .logo {
     text-decoration: none;
     color: #000;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-    margin-right: 63px;
-    padding: 24px 0;
+    line-height: 1.12;
+    font-size: 24px;
+    letter-spacing: 0.03em;
+    padding: 16px 0;
+
+    @media screen and (min-width:$tablet) {
+        margin-right: 87px;
+        padding: 26px 0;
+    }
+
+    @media screen and (min-width:$desktop) {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-right: 63px;
+        padding: 24px 0;
+    }
 
     &--accent {
         color: var(--accent-color);
@@ -71,32 +96,46 @@
 }
 
 .contacts {
-    display: flex;
-    gap: 50px;
+    display: none;
     list-style: none;
     font-weight: 500;
     line-height: 1.14;
 
-        &__item {
-            display: flex;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    &__item {
+        display: flex;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: var(--primary-text-color);
+        font-weight: 500;
+        padding: 32px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        fill: currentColor;
+        transition: color 250ms var(--timing-function);
+
+        @media screen and (max-width:$desktop) {
+            padding: 0;
         }
 
-        &__link {
-            text-decoration: none;
-            color: var(--primary-text-color);
-            font-weight: 500;
-            padding: 32px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            fill: currentColor;
-            transition: color 250ms var(--timing-function);
-
-            &:hover,
-            &:focus {
-                color: var(--accent-color);
-            }
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
         }
+    }
 }
 
 

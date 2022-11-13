@@ -13,13 +13,23 @@
 
         &__list {
              display: flex;
+             flex-wrap: wrap;
+             justify-content: center;
              gap: 30px;
              list-style: none;
+             max-width: $mobile;
+
+             @media screen and (min-width:$tablet) {
+                max-width: 1600px;
+            }
+             @media screen and (min-width:$desktop) {
+                max-width: 1600px;
+             }
             }
 
          &__link {
              display: flex;
-             width: 170px;
+             width: 210px;
              height: 92px;
              justify-content: center;
              align-items: center;
@@ -29,6 +39,10 @@
              border: 1px solid var(--social-color);
              transition: fill 250ms var(--timing-function),
              border-color 250ms var(--timing-function);
+
+            @media screen and (min-width: $tablet) {
+                width: 170px;
+            }
 
                 &:hover,
                 &:focus {
