@@ -1,0 +1,81 @@
+.team {
+    background-color: var(--background-section-sub);
+    padding-bottom: 94px;
+    padding-top: 94px;
+
+    &__title {
+        @extend %title;
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        list-style: none;
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+
+    &__link {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        color: var(--social-color);
+        fill: currentColor;
+        transition: background-color 250ms var(--timing-function);
+
+        &:hover,
+        &:focus {
+            background-color: var(--accent-color);
+        }
+        &:hover .social__icon,
+        &:focus .social__icon {
+            fill: var(--white);
+        }
+    }
+
+    &__icon {
+        transition: fill 250ms var(--timing-function);
+    }
+}
+
+.card{
+    &__container {
+        background-color: var(--white);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__text {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.18;
+        letter-spacing: 0.03em;
+        color: var(--secondary-text-color);
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__position {
+        font-size: 16px;
+        line-height: 1.18;
+        letter-spacing: 0.03em;
+        margin-bottom: 16px;
+    }
+}
