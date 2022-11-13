@@ -122,9 +122,6 @@ body {
   font-weight: 500;
   line-height: 1.14;
 }
-.navigation__list:hover, .navigation__list:focus {
-  color: var(--accent-color);
-}
 .navigation__item {
   text-decoration: none;
   color: var(--secondary-text-color);
@@ -132,6 +129,9 @@ body {
   display: block;
   -webkit-transition: color 250ms var(--timing-function);
   transition: color 250ms var(--timing-function);
+}
+.navigation__item:hover, .navigation__item:focus {
+  color: var(--accent-color);
 }
 .navigation__item--current {
   color: var(--accent-color);
@@ -576,6 +576,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 .subscription__button:focus, .subscription__button:hover {
   background-color: var(--accent-color-hover);

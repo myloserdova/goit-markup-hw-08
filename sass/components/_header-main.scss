@@ -23,11 +23,6 @@
         list-style: none;
         font-weight: 500;
         line-height: 1.14;
-
-        &:hover,
-        &:focus {
-            color: var(--accent-color);
-        }
     }
 
     &__item {
@@ -36,6 +31,11 @@
         padding: 32px 0;
         display: block;
         transition: color 250ms var(--timing-function);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
 
         &--current {
             color: var(--accent-color);
