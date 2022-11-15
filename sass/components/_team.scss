@@ -2,6 +2,8 @@
     background-color: var(--background-section-sub);
     padding-bottom: 94px;
     padding-top: 94px;
+    width: 100%;
+    min-width: $mobile;
 
     &__title {
         @extend %title;
