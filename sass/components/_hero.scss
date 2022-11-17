@@ -3,21 +3,38 @@
     padding-top: 118px;
     padding-bottom: 118px;
     text-align: center;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url(../images/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: $mobile;
+    width: auto;
     height: 400px;
     margin: 0 auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/header-mobile.jpg);
+
+    @media screen and (min-resolution: 2dppx), (min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(../images/header-mobile@2x.jpg);
+    }
+    
+
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+        width: 480px;
+    }
 
     @media screen and (min-width:$tablet) {
         width: 100%;
         max-width: $tablet;
         padding-top: 118px;
         padding-bottom: 118px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(../images/header-tablet.jpg);
+
+        @media screen and (min-resolution: 2dppx), (min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(../images/header-tablet@2x.jpg);
+        }        
     }
 
     @media screen and (min-width:$desktop) {
@@ -26,9 +43,17 @@
         max-width: 1600px;
         padding-top: 200px;
         padding-bottom: 200px;
-    }
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)), url(../images/header-desktop.jpg);
 
-    &__title {
+        @media screen and (min-resolution: 2dppx), (min-device-pixel-ratio: 2) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(../images/header-desktop@2x.jpg);
+        }   
+    }
+}
+
+.hero__title {
         display: flex;
         flex-wrap: wrap;
         margin: 0px auto 30px auto;
@@ -47,10 +72,6 @@
             width: 695px;
         }
     }
-
-    &__container {
-    }
-}
 
 .main-button {
     @extend %button;

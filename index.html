@@ -20,10 +20,98 @@
   <body>
     <header class="header">
       <div class="header__container container">
-        <nav class="navigation">
-          <a href="./index.html" lang="en" class="logo header__link"
-            ><span class="logo--accent">Web</span>Studio</a
+        <a href="./index.html" lang="en" class="logo header__link"
+          ><span class="logo--accent">Web</span>Studio</a
+        >
+        <button
+          type="button"
+          class="menu__button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use
+              class="menu__icon-close"
+              href="./images/icons.svg#icon-close-menu"
+            ></use>
+            <use
+              class="menu__icon-open"
+              href="./images/icons.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="menu__container js-menu-container" id="mobile-menu">
+          <button
+            type="button"
+            class="menu__button js-close-menu"
+            aria-controls="mobile-menu"
           >
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use
+                class="menu__icon-close"
+                href="./images/icons.svg#icon-close-menu"
+              ></use>
+              <use
+                class="menu__icon-open"
+                href="./images/icons.svg#icon-menu"
+              ></use>
+            </svg>
+          </button>
+
+          <nav class="mobile-navigation">
+            <ul class="mobile-navigation__list">
+              <li>
+                <a
+                  href="#"
+                  class="mobile-navigation__item mobile-navigation__item--current"
+                  >Студія</a
+                >
+              </li>
+              <li>
+                <a href="./portfolio.html" class="mobile-navigation__item"
+                  >Портфоліо</a
+                >
+              </li>
+              <li>
+                <a href="#" class="mobile-navigation__item">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a
+                href="tel:+380961111111"
+                class="mobile-contacts__link--big header__link"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-contacts__link--small header__link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-social">
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Instagram</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Twitter</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Facebook</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="navigation">
           <ul class="navigation__list">
             <li>
               <a
@@ -136,6 +224,7 @@
             <li class="gallery__item">
               <h3 class="gallery__name">Десктопні додатки</h3>
               <img
+                srcset="./images/img1.jpg 1x, ./images/img1@2x.jpg 2x"
                 src="./images/img1.jpg"
                 alt="Руки на клавіатурі"
                 width="370"
@@ -144,6 +233,7 @@
             <li class="gallery__item">
               <h3 class="gallery__name">Мобільні додатки</h3>
               <img
+                srcset="./images/img2.jpg 1x, ./images/img2@2x.jpg 2x"
                 src="./images/img2.jpg"
                 alt="Робота з телефоном та комп'ютером"
                 width="370"
@@ -152,6 +242,7 @@
             <li class="gallery__item">
               <h3 class="gallery__name">Дизайнерські рішення</h3>
               <img
+                srcset="./images/img3.jpg 1x, ./images/img3@2x.jpg 2x"
                 src="./images/img3.jpg"
                 alt="Палітра кольорів на планшеті"
                 width="370"
@@ -167,6 +258,10 @@
             <li class="card">
               <div class="card__container">
                 <img
+                  srcset="
+                    ./images/colleague1.jpg    1x,
+                    ./images/colleague1@2x.jpg 2x
+                  "
                   src="./images/colleague1.jpg"
                   alt="Усміхнений хлопець в окулярах"
                   width="270"
@@ -210,6 +305,10 @@
             <li class="card">
               <div class="card__container">
                 <img
+                  srcset="
+                    ./images/colleague2.jpg    1x,
+                    ./images/colleague2@2x.jpg 2x
+                  "
                   src="./images/colleague2.jpg"
                   alt="Усміхнена дівчина в піджаку"
                   width="270"
@@ -253,6 +352,10 @@
             <li class="card">
               <div class="card__container">
                 <img
+                  srcset="
+                    ./images/colleague3.jpg    1x,
+                    ./images/colleague3@2x.jpg 2x
+                  "
                   src="./images/colleague3.jpg"
                   alt="Усміхнений хлопець в блакитній сорочці"
                   width="270"
@@ -296,6 +399,10 @@
             <li class="card">
               <div class="card__container">
                 <img
+                  srcset="
+                    ./images/colleague4.jpg    1x,
+                    ./images/colleague4@2x.jpg 2x
+                  "
                   src="./images/colleague4.jpg"
                   alt="Хлопець в окулярах та чорній футболці"
                   width="270"
@@ -540,5 +647,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

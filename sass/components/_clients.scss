@@ -1,57 +1,80 @@
 .clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
-    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-        &__title {
-             font-size: 36px;
-             line-height: 1.16;
-             letter-spacing: 0.03em;
-             color: var(--secondary-text-color);
-             text-align: center;
-             margin-bottom: 50px;
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+        max-width: $mobile;
+        margin: auto;
+    }
+    
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+        width: $mobile;
+        margin: auto;
+    }
+    
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        width: $tablet;
+        max-width: $tablet;
+        margin: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-bottom: 94px;
+        padding-top: 94px;
+    }
+
+    &__title {
+         font-size: 36px;
+         line-height: 1.16;
+         letter-spacing: 0.03em;
+         color: var(--secondary-text-color);
+         text-align: center;
+         justify-content: center;
+         margin-bottom: 50px;
+        }
+
+    &__list {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 30px;
+         list-style: none;
+         max-width: $mobile;
+
+         @media screen and (min-width:$tablet) {
+            max-width: 1600px;
+        }
+         @media screen and (min-width:$desktop) {
+            max-width: 1600px;
+         }
+        }
+
+     &__link {
+         display: flex;
+         width:42vw;
+         max-width: 210px;
+         height: 92px;
+         justify-content: center;
+         align-items: center;
+         border-radius: 4px;
+         color: var(--social-color);
+         fill: currentColor;
+         border: 1px solid var(--social-color);
+         transition: fill 250ms var(--timing-function),
+         border-color 250ms var(--timing-function);
+
+        @media screen and (min-width: $tablet) {
+            width: 170px;
+        }
+
+            &:hover,
+            &:focus {
+                fill: var(--accent-color);
+                border-color: var(--accent-color);
+                cursor: pointer;
             }
-
-        &__list {
-             display: flex;
-             flex-wrap: wrap;
-             justify-content: center;
-             gap: 30px;
-             list-style: none;
-             max-width: $mobile;
-
-             @media screen and (min-width:$tablet) {
-                max-width: 1600px;
-            }
-             @media screen and (min-width:$desktop) {
-                max-width: 1600px;
-             }
-            }
-
-         &__link {
-             display: flex;
-             width: 210px;
-             height: 92px;
-             justify-content: center;
-             align-items: center;
-             border-radius: 4px;
-             color: var(--social-color);
-             fill: currentColor;
-             border: 1px solid var(--social-color);
-             transition: fill 250ms var(--timing-function),
-             border-color 250ms var(--timing-function);
-
-            @media screen and (min-width: $tablet) {
-                width: 170px;
-            }
-
-                &:hover,
-                &:focus {
-                    fill: var(--accent-color);
-                    border-color: var(--accent-color);
-                    cursor: pointer;
-                }
-            }
+        }
 }
 
 

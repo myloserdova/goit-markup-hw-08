@@ -2,6 +2,7 @@
     border-bottom: 1px solid var(--border-color);
 
     &__container {
+        position: relative;
         display: flex;
         align-items: center;
 

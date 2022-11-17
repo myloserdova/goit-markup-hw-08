@@ -20,25 +20,120 @@
   <body>
     <header class="header">
       <div class="header__container container">
-        <nav class="navigation">
-          <a href="./index.html" lang="en" class="logo header__link"
-            ><span class="logo--accent">Web</span>Studio</a
+        <a href="./index.html" lang="en" class="logo header__link"
+          ><span class="logo--accent">Web</span>Studio</a
+        >
+        <button
+          type="button"
+          class="menu__button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use
+              class="menu__icon-close"
+              href="./images/icons.svg#icon-close-menu"
+            ></use>
+            <use
+              class="menu__icon-open"
+              href="./images/icons.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="menu__container js-menu-container" id="mobile-menu">
+          <button
+            type="button"
+            class="menu__button js-close-menu"
+            aria-controls="mobile-menu"
           >
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use
+                class="menu__icon-close"
+                href="./images/icons.svg#icon-close-menu"
+              ></use>
+              <use
+                class="menu__icon-open"
+                href="./images/icons.svg#icon-menu"
+              ></use>
+            </svg>
+          </button>
+
+          <nav class="mobile-navigation">
+            <ul class="mobile-navigation__list">
+              <li>
+                <a
+                  href="#"
+                  class="mobile-navigation__item mobile-navigation__item--current"
+                  >Студія</a
+                >
+              </li>
+              <li>
+                <a href="./portfolio.html" class="mobile-navigation__item"
+                  >Портфоліо</a
+                >
+              </li>
+              <li>
+                <a href="#" class="mobile-navigation__item">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a
+                href="tel:+380961111111"
+                class="mobile-contacts__link--big header__link"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-contacts__link--small header__link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-social">
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Instagram</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Twitter</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Facebook</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="navigation">
           <ul class="navigation__list">
             <li>
-              <a href="./index.html" class="navigation__item header__link"
-                >Студія</a
+              <a href="./index.html" class="navigation__item header__link">Студія</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="navigation__item navigation__item--current header__link"
+                >Портфоліо</a
               >
             </li>
             <li>
-              <a href="#" class="navigation__item  navigation__item--current header__link">Портфоліо</a>
+              <a href="#" class="navigation__item header__link">Контакти</a>
             </li>
-            <li><a href="#" class="navigation__item header__link">Контакти</a></li>
           </ul>
         </nav>
         <ul class="contacts">
           <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link header__link">
+            <a
+              href="mailto:info@devstudio.com"
+              class="contacts__link header__link"
+            >
               <svg width="16" height="12">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
@@ -68,7 +163,9 @@
             <li>
               <button type="button" class="filter__button">Додатки</button>
             </li>
-            <li><button type="button" class="filter__button">Дизайн</button></li>
+            <li>
+              <button type="button" class="filter__button">Дизайн</button>
+            </li>
             <li>
               <button type="button" class="filter__button">Маркетинг</button>
             </li>
@@ -90,8 +187,7 @@
                 </div>
                 <div class="project__text">
                   <h2 class="project__name">Технокряк</h2>
-                  <p class="project__type
-                  ">Веб-сайт</p>
+                  <p class="project__type">Веб-сайт</p>
                 </div>
               </a>
             </li>
@@ -133,8 +229,7 @@
                 </div>
                 <div class="project__text">
                   <h2 class="project__name">Ресторан Seafood</h2>
-                  <p class="project__type
-                  ">Додаток</p>
+                  <p class="project__type">Додаток</p>
                 </div>
               </a>
             </li>
@@ -154,8 +249,7 @@
                 </div>
                 <div class="project__text">
                   <h2 class="project__name">Проєкт Prime</h2>
-                  <p class="project__type
-                  ">Маркетинг</p>
+                  <p class="project__type">Маркетинг</p>
                 </div>
               </a>
             </li>
@@ -175,8 +269,7 @@
                 </div>
                 <div class="project__text">
                   <h2 class="project__name">Проєкт Boxes</h2>
-                  <p class="project__type
-                  ">Додаток</p>
+                  <p class="project__type">Додаток</p>
                 </div>
               </a>
             </li>
@@ -196,8 +289,7 @@
                 </div>
                 <div class="project__text">
                   <h2 class="project__name">Inspiration has no Borders</h2>
-                  <p class="project__type
-                  ">Веб-сайт</p>
+                  <p class="project__type">Веб-сайт</p>
                 </div>
               </a>
             </li>
@@ -217,8 +309,7 @@
                 </div>
                 <div class="project__text">
                   <h2 class="project__name">Видання Limited Edition</h2>
-                  <p class="project__type
-                  ">Дизайн</p>
+                  <p class="project__type">Дизайн</p>
                 </div>
               </a>
             </li>
@@ -238,8 +329,7 @@
                 </div>
                 <div class="project__text">
                   <h2 class="project__name">Проєкт LAB</h2>
-                  <p class="project__type
-                  ">Маркетинг</p>
+                  <p class="project__type">Маркетинг</p>
                 </div>
               </a>
             </li>
@@ -259,8 +349,7 @@
                 </div>
                 <div class="project__text">
                   <h2 class="project__name">Growing Business</h2>
-                  <p class="project__type
-                  ">Додаток</p>
+                  <p class="project__type">Додаток</p>
                 </div>
               </a>
             </li>
@@ -268,69 +357,70 @@
         </div>
       </section>
     </main>
-      <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
-        <div>
-          <a href="./index.html" lang="en" class="footer__logo"
-            ><span class="logo--accent">Web</span>Studio</a
-          >
-          <address>
-            <ul class="address">
+        <div class="footer__tablet">
+          <div>
+            <a href="./index.html" lang="en" class="footer__logo"
+              ><span class="logo--accent">Web</span>Studio</a
+            >
+            <address>
+              <ul class="address">
+                <li>
+                  <a
+                    href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class="address__link"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:info@devstudio.com" class="address__link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li>
+                  <a href="tel:+380961111111" class="address__link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="follow">
+            <p class="follow__text">Приєднуйтесь</p>
+            <ul class="social follow__social">
               <li>
-                <a
-                  href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  class="address__link"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+                <a href="" class="social__link">
+                  <svg class="social__icon follow__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a href="mailto:info@devstudio.com" class="address__link"
-                  >info@devstudio.com</a
-                >
+                <a href="" class="social__link">
+                  <svg class="social__icon follow__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a href="tel:+380961111111" class="address__link"
-                  >+38 096 111 11 11</a
-                >
+                <a href="" class="social__link">
+                  <svg class="social__icon follow__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="social__link">
+                  <svg class="social__icon follow__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-
-        <div class="follow">
-          <p class="follow__text">Приєднуйтесь</p>
-          <ul class="social follow__social">
-            <li>
-              <a href="" class="social__link">
-                <svg class="social__icon follow__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="social__link">
-                <svg class="social__icon follow__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="social__link">
-                <svg class="social__icon follow__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="" class="social__link">
-                <svg class="social__icon follow__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="subscription">
           <form>
@@ -354,5 +444,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
