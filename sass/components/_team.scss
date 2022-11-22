@@ -3,21 +3,6 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    @media screen and (max-width: $mobile) {
-        width: 100%;
-        max-width: $mobile;
-        margin: auto;
-    }
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
-        width: $mobile;
-        margin: auto;
-    }
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
-        width: $tablet;
-        max-width: $tablet;
-        margin: auto;
-    }
-
     @media screen and (min-width: $desktop) {
     padding-bottom: 94px;
     padding-top: 94px;
